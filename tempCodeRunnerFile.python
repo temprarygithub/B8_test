@@ -1,0 +1,16 @@
+def pattern(main_func):
+    def pattern_func():
+        for i in range(1,11):
+            print(chr(64+i),end=" ") #A B C D E F G
+        print()
+        main_func()
+        for j in range(1,11):
+            print(j,end=" ")
+    return pattern_func
+
+@pattern
+def main_func():
+    for i in range(1,12):
+        print(chr(33+i),end=" ")
+    print()
+main_func()
